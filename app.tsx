@@ -1,5 +1,6 @@
-const packageJson = require("./package.json") as any;
+import { Button, Col, Row } from "antd";
 
+const packageJson = require("./package.json") as any;
 
 export const getAttributes = (): any => {
   return {
@@ -9,8 +10,17 @@ export const getAttributes = (): any => {
   };
 };
 
-const App =()=>{
-  return <div>Hello Plugin</div>
-}
+const App = () => {
+  return (
+    <Row>
+      <Col>
+        <Button>Test</Button>
+      </Col>
+      <Col>
+        <Button>Test</Button>
+      </Col>
+    </Row>
+  );
+};
 
 export default App;
