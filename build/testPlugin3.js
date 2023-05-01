@@ -60,23 +60,13 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
-/***/ "./app.tsx":
-/*!*****************!*\
-  !*** ./app.tsx ***!
-  \*****************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.getAttributes = void 0;\r\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\r\nvar antd_1 = __webpack_require__(/*! antd */ \"antd\");\r\nvar packageJson = __webpack_require__(/*! ./package.json */ \"./package.json\");\r\nvar getAttributes = function () {\r\n    return {\r\n        name: packageJson.name,\r\n        libraryName: packageJson.libraryName,\r\n        version: packageJson.version,\r\n    };\r\n};\r\nexports.getAttributes = getAttributes;\r\nvar App = function (useAuth) {\r\n    var userName = useAuth().userName;\r\n    debugger;\r\n    return ((0, jsx_runtime_1.jsx)(antd_1.Row, { children: (0, jsx_runtime_1.jsx)(antd_1.Col, { children: (0, jsx_runtime_1.jsx)(antd_1.Button, { children: userName }) }) }));\r\n};\r\nexports[\"default\"] = App;\r\n\n\n//# sourceURL=webpack://testPlugin3/./app.tsx?");
-
-/***/ }),
-
 /***/ "./index.tsx":
 /*!*******************!*\
   !*** ./index.tsx ***!
   \*******************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.getAttributes = void 0;\r\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\r\nvar app_1 = __webpack_require__(/*! ./app */ \"./app.tsx\");\r\nvar packageJson = __webpack_require__(/*! ./package.json */ \"./package.json\");\r\nvar getAttributes = function () {\r\n    return {\r\n        name: packageJson.name,\r\n        libraryName: packageJson.libraryName,\r\n        version: packageJson.version,\r\n    };\r\n};\r\nexports.getAttributes = getAttributes;\r\nvar Plugin = function () {\r\n    return (0, jsx_runtime_1.jsx)(app_1.default, {});\r\n};\r\nexports[\"default\"] = Plugin;\r\n\n\n//# sourceURL=webpack://testPlugin3/./index.tsx?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.getAttributes = void 0;\r\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\r\nvar antd_1 = __webpack_require__(/*! antd */ \"antd\");\r\nvar packageJson = __webpack_require__(/*! ./package.json */ \"./package.json\");\r\nvar getAttributes = function () {\r\n    return {\r\n        name: packageJson.name,\r\n        libraryName: packageJson.libraryName,\r\n        version: packageJson.version,\r\n    };\r\n};\r\nexports.getAttributes = getAttributes;\r\nvar Plugin = function (_a) {\r\n    var useAuth = _a.useAuth;\r\n    var _b = useAuth(), userName = _b.userName, setUserName = _b.setUserName;\r\n    return ((0, jsx_runtime_1.jsxs)(antd_1.Row, { children: [(0, jsx_runtime_1.jsx)(antd_1.Input, { onChange: function (e) {\r\n                    setUserName(e.target.value);\r\n                } }), (0, jsx_runtime_1.jsx)(antd_1.Col, { children: (0, jsx_runtime_1.jsx)(antd_1.Button, { children: userName }) })] }));\r\n};\r\nexports[\"default\"] = Plugin;\r\n\n\n//# sourceURL=webpack://testPlugin3/./index.tsx?");
 
 /***/ }),
 

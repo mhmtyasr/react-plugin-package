@@ -1,4 +1,4 @@
-import App from "./app";
+import { Button, Col, Input, Row } from "antd";
 
 const packageJson = require("./package.json") as any;
 
@@ -10,8 +10,20 @@ export const getAttributes = (): any => {
   };
 };
 
-const Plugin = () => {
-  return <App></App>;
+const Plugin = ({ useAuth }) => {
+  const { userName, setUserName } = useAuth();
+  return (
+    <Row>
+      <Input
+        onChange={(e) => {
+          setUserName(e.target.value);
+        }}
+      ></Input>
+      <Col>
+        <Button>{userName}</Button>
+      </Col>
+    </Row>
+  );
 };
 
 export default Plugin;
