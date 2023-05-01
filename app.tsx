@@ -10,14 +10,13 @@ export const getAttributes = (): any => {
   };
 };
 
-const App = () => {
+const App = (useAuth) => {
+
+  const { userName } = useAuth();
   return (
     <Row>
       <Col>
-        <Button>Test</Button>
-      </Col>
-      <Col>
-        <Button>Test</Button>
+        <Button>{userName}</Button>
       </Col>
     </Row>
   );
