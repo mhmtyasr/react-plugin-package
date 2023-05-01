@@ -13,6 +13,7 @@ export const getAttributes = (): any => {
 const App = (useAuth) => {
 
   const { userName } = useAuth();
+  debugger;
   return (
     <Row>
       <Col>
