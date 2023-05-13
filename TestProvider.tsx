@@ -8,7 +8,7 @@ export interface TestContextType {
 let TestContext = createContext<TestContextType>(null!);
 
 function TestProvider({ children }: { children: React.ReactNode }) {
-    let [testUserName, setTestUserName] = useState<string>("Sedef Aktunç");
+    const [testUserName, setTestUserName] = useState(0);
 
     let value = { testUserName, setTestUserName };
 
