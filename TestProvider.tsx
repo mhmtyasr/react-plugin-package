@@ -1,4 +1,4 @@
-import React, { createContext,  useContext } from "react";
+import React, { createContext, useContext } from "react";
 
 export interface TestContextType {
     userName: string;
@@ -14,9 +14,9 @@ function TestProvider({ children }: { children: React.ReactNode }) {
 
     return <TestContext.Provider value={value}>{children}</TestContext.Provider>;
 }
-
-const useTest = (): TestContextType => {
+export  const useTest = (): TestContextType => {
     return useContext(TestContext);
 };
 
-export { useTest, TestProvider };
+export default TestProvider;
+
