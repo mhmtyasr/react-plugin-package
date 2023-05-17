@@ -44,5 +44,11 @@ module.exports = (env) => ({
       commonjs: "antd",
       commonjs2: "antd",
     },
+    'react': {
+      root: 'React',
+      commonjs: 'react',
+      commonjs2: 'react',
+    },
+    
   }
 });
