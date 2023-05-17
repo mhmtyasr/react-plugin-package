@@ -10,9 +10,9 @@ export const getAttributes = (): any => {
     version: packageJson.version,
     service: {
       name: packageJson.libraryName,
-      provider: (e) => TestProvider(e),
+      provider:  TestProvider,
       contextApi: useTest,
-      defaultValue: {},
+      defaultValue: {deneme: "deneme"},
     },
   };
 };
