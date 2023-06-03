@@ -8,12 +8,17 @@ export const getAttributes = (): any => {
     name: packageJson.name,
     libraryName: packageJson.libraryName,
     version: packageJson.version,
+    service: {
+      name: packageJson.libraryName,
+      provider:  TestProvider,
+      contextApi: useTest,
+      defaultValue: {deneme: "deneme"},
+    },
   };
 };
 
-const Plugin = ({ useAuth ,getContextApi}) => {
+const Plugin = ({ useAuth }) => {
   const { userName, setUserName } = useAuth();
-  const { testUserName, setTestUserName } = getContextApi("testPlugin");
   return (
     <Row>
       <Input
