@@ -13,7 +13,7 @@ export const getAttributes = (): any => {
 
 const Plugin = ({ useAuth,getContextApi }) => {
   const { userName, setUserName } = useAuth();
-  const a = getContextApi();  
+  const a = getContextApi("testPlugin");  
 
   debugger;
   return (
