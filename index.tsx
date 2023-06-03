@@ -1,6 +1,6 @@
 import { Button, Col, Input, Row } from "antd";
 import TestProvider ,{ TestContext } from "./TestProvider";
-
+import * as React from "react";
 const packageJson = require("./package.json") as any;
 
 export const getAttributes = (): any => {
@@ -17,8 +17,9 @@ export const getAttributes = (): any => {
   };
 };
 
-const Plugin = ({ useAuth }) => {
+const Plugin = ({ useAuth ,getContextApi}) => {
   const { userName, setUserName } = useAuth();
+    const context = React.useContext(getContextApi("testPlugin"));
   return (
     <Row>
       <Input
