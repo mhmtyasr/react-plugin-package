@@ -15,7 +15,9 @@ const Plugin = ({ useAuth,getContextApi }) => {
   const { userName, setUserName } = useAuth();
 
   
-  const a = getContextApi("testPlugin");  
+  const useTest = getContextApi("testPlugin");  
+
+  const { testUserName, setTestUserName } = useTest();
 
   debugger;
   return (
