@@ -1,6 +1,6 @@
 {
-  "name": "testPlugin5",
-  "libraryName": "testPlugin5",
+  "name": "testPlugin",
+  "libraryName": "testPlugin",
   "version": "0.1.0",
   "scripts": {
     "build": "npx webpack  --mode production --env ENV=production ",
