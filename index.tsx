@@ -12,7 +12,10 @@ export const getAttributes = (): any => {
 };
 
 const Plugin = ({ useAuth ,getContextApi}) => {
+  const [a, setA] = React.useState<string | null>(null);
+
   const { userName, setUserName } = useAuth();
+
     const {setTestUserName,testUserName} = React.useContext(getContextApi("testPlugin"));
 
   return (
