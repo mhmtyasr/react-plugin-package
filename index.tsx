@@ -13,18 +13,18 @@ export const getAttributes = (): any => {
 
 const Plugin = ({ useAuth ,getContextApi}) => {
   const { userName, setUserName } = useAuth();
-    const context = React.useContext(getContextApi("testPlugin"));
+    const {setTestUserName,testUserName} = React.useContext(getContextApi("testPlugin"));
 
-    debugger;
   return (
     <Row>
       <Input
         onChange={(e) => {
-          setUserName(e.target.value);
+          setTestUserName(e.target.value);
         }}
       ></Input>
       <Col>
         <Button>{userName}</Button>
+        <Button>{testUserName}</Button>
       </Col>
     </Row>
   );
