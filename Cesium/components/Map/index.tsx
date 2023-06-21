@@ -5,7 +5,7 @@ import * as React from "react";
 
 const Map = ({ getContextApi }: any) => {
   const { missionData, handleAddMissionData } = React.useContext(
-    getContextApi("testPlugin")
+    getContextApi("testPluginWithProvider")
   );
 
   return (

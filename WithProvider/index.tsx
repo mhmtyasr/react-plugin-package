@@ -19,7 +19,7 @@ export const getAttributes = (): any => {
 
 const Plugin = ({ useAuth, getContextApi }) => {
   const { missionData,handleAddMissionData } = React.useContext(
-    getContextApi("testPlugin")
+    getContextApi("testPluginWithProvider")
   );
 
   const [entityName, setEntityName] = React.useState<string>("");
