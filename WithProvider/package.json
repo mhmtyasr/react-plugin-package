@@ -1,5 +1,5 @@
 {
-  "name": "testPkuginWithProvider",
+  "name": "testPluginWithProvider",
   "libraryName": "testPluginWithProvider",
   "version": "0.1.0",
   "scripts": {
