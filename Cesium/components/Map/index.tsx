@@ -2,10 +2,17 @@ import * as CesiumWidgets from "@cesium/widgets";
 import * as CesiumEngine from "@cesium/engine";
 import * as React from "react";
 
+
+declare global {
+  interface Window {
+    CESIUM_BASE_URL: string;
+  }
+}
 const Map = ({ getContextApi }: any) => {
   const { missionData, handleAddMissionData } = React.useContext(
     getContextApi("testPluginWithProvider")
   );
+  window.CESIUM_BASE_URL = 'http://localhost:3000/';
   const viewer = React.useRef<CesiumWidgets.Viewer>();
 
   const bingImage = new CesiumEngine.BingMapsImageryProvider({
