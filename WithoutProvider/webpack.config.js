@@ -36,7 +36,7 @@ module.exports = (env) => ({
     library: `${packageJson.libraryName}`,
     libraryTarget: "umd",
     path: __dirname,
-    filename: `./build/${packageJson.libraryName}.js`,
+    filename: `./build/${packageJson.libraryName}@${packageJson.version}.js`,
   },
   externals: {
     "antd": {
