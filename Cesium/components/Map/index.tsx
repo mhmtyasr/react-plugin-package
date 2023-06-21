@@ -12,6 +12,7 @@ const Map = ({ getContextApi }: any) => {
   const { missionData, handleAddMissionData } = React.useContext(
     getContextApi("testPluginWithProvider")
   );
+  debugger;
   const position = [51.505, -0.09];
   return (
     <>
