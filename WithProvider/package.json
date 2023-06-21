@@ -1,7 +1,7 @@
 {
   "name": "testPluginWithProvider",
   "libraryName": "testPluginWithProvider",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "build": "npx webpack  --mode production --env ENV=production ",
     "local-build": "npx webpack  --mode development   --env  ENV=local"
