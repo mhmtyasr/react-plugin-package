@@ -1,5 +1,12 @@
 import * as React from "react";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import {
+  CircleMarker,
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  Tooltip,
+} from "react-leaflet";
 
 const Map = ({ getContextApi }: any) => {
   const { missionData, handleAddMissionData } = React.useContext(
@@ -16,9 +23,13 @@ const Map = ({ getContextApi }: any) => {
         />
         {missionData.map((item: any) => {
           return (
-            <Marker position={[position[0], Math.random() * 100]}>
-              <Popup>{item}</Popup>
-            </Marker>
+            <CircleMarker
+              center={[position[0], Math.random() * 100]}
+              pathOptions={{ color: "red" }}
+              radius={20}
+            >
+              <Tooltip>{item}</Tooltip>
+            </CircleMarker>
           );
         })}
       </MapContainer>
