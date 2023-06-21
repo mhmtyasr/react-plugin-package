@@ -22,8 +22,6 @@ const Plugin = ({ useAuth, getContextApi }) => {
     getContextApi("testPluginWithProvider")
   );
 
-  const { handleDeleteMissionData } = React.useContext(useAuth);
-  
 
   const [entityName, setEntityName] = React.useState<string>("");
 
