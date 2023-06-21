@@ -12,6 +12,9 @@ export const getAttributes = (): any => {
 };
 
 const Plugin = ({ useAuth, getContextApi }) => {
+  const { missionData, handleAddMissionData } = React.useContext(
+    getContextApi("testPluginWithProvider")
+  );
   return <Map getContextApi={getContextApi} />;
 };
 
