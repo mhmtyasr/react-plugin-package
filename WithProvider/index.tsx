@@ -22,7 +22,13 @@ const Plugin = ({ useAuth, getContextApi }) => {
     getContextApi("testPluginWithProvider")
   );
 
+  const { handleDeleteMissionData } = React.useContext(useAuth);
+  
+
   const [entityName, setEntityName] = React.useState<string>("");
+
+  const { userName, setUserName } = useAuth();
+
 
   return (
     <Row>
@@ -40,6 +46,16 @@ const Plugin = ({ useAuth, getContextApi }) => {
         Add Mission
       </Button>
       {missionData.length}
+      {userName}
+
+      <Button
+        onClick={() => {
+          setUserName(entityName)
+        }}
+      >
+        Set Name
+      </Button>
+
     </Row>
   );
 };
