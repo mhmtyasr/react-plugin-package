@@ -1,19 +1,30 @@
-import * as React from 'react'
+import * as React from "react";
 
 export interface TestContextType {
-    userName: string;
-    setUserName: (userName: string) => void;
+  missionData: any;
+  setMissionData: (param: any) => void;
 }
 
 export let TestContext = React.createContext<TestContextType>(null!);
 
 function TestProvider({ children }: { children: React.ReactNode }) {
-    const [testUserName, setTestUserName] = React.useState<string | null>(null);
+  const [missionData, setMissionData] = React.useState<[]>([]);
 
-    let value = { testUserName, setTestUserName };
+  const handleAddMissionData = (param: any) => {
+    setMissionData([...missionData, param]);
+  };
 
-    return <TestContext.Provider value={value}>{children}</TestContext.Provider>;
+  const handleDeleteMissionData = (param: any) => {
+    let temp = [...missionData];
+
+    temp.splice(param, 1);
+
+    setMissionData(temp);
+  };
+
+  let value = { missionData, handleDeleteMissionData, handleAddMissionData };
+
+  return <TestContext.Provider value={value}>{children}</TestContext.Provider>;
 }
 
 export default TestProvider;
-

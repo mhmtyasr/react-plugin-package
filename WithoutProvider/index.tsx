@@ -10,19 +10,21 @@ export const getAttributes = (): any => {
   };
 };
 
-const Plugin = ({ useAuth ,getContextApi}) => {
-    const {setTestUserName,testUserName} = React.useContext(getContextApi("testPlugin"));
+const Plugin = ({ useAuth, getContextApi }) => {
+  const {missionData,handleDeleteMissionData } = React.useContext(
+    getContextApi("testPlugin")
+  );
 
   return (
     <Row>
-      <Input
-        onChange={(e) => {
-          setTestUserName(e.target.value);
+      <Button
+        onClick={() => {
+          handleDeleteMissionData();
         }}
-      ></Input>
-      <Col>
-        <Button>{testUserName}</Button>
-      </Col>
+      >
+        Delete Mission
+      </Button>
+      {missionData.length}
     </Row>
   );
 };
