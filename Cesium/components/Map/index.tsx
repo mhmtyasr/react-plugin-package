@@ -2,8 +2,6 @@ import * as CesiumWidgets from "@cesium/widgets";
 import * as CesiumEngine from "@cesium/engine";
 import * as React from "react";
 import Viewer from "../Resium/Viewer";
-import LabelCollection from "../Resium/LabelCollection/LabelCollection";
-import Label from "../Resium/Label/Label";
 
 const Map = ({ getContextApi }: any) => {
   const { missionData, handleAddMissionData } = React.useContext(
@@ -49,21 +47,7 @@ const Map = ({ getContextApi }: any) => {
         maximumRenderTimeChange: Infinity,
       }}
     >
-      <LabelCollection
-        modelMatrix={CesiumEngine.Transforms.eastNorthUpToFixedFrame(center)}
-      >
-        {missionData.map((mission: any) => {
-          return (
-            <Label
-              fillColor={CesiumEngine.Color.ORANGE}
-              position={
-                new CesiumEngine.Cartesian3(Math.random() * 1000, 0.0, 0.0)
-              }
-              text={mission}
-            />
-          );
-        })}
-      </LabelCollection>
+    
     </Viewer>
   );
 };
