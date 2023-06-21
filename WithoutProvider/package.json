@@ -1,6 +1,6 @@
 {
   "name": "testPkuginWitouthProvider",
-  "libraryName": "testPkuginWitouthProvider",
+  "libraryName": "testPluginWitouthProvider",
   "version": "0.1.0",
   "scripts": {
     "build": "npx webpack  --mode production --env ENV=production ",
