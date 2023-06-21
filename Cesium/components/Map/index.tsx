@@ -8,17 +8,21 @@ const Map = ({ getContextApi }: any) => {
 
   const position = [51.505, -0.09];
   return (
-    <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
-    </MapContainer>
+    <div style={{ height: 500 }}>
+      <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        {missionData.map((item: any) => {
+          return (
+            <Marker position={[position[0], Math.random() * 100]}>
+              <Popup>{item}</Popup>
+            </Marker>
+          );
+        })}
+      </MapContainer>
+    </div>
   );
 };
 
