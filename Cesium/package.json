@@ -1,6 +1,6 @@
 {
-  "name": "gaugesMapPlugin",
-  "libraryName": "gaugesMapPlugin",
+  "name": "leafletMapPlugin",
+  "libraryName": "leafletMapPlugin",
   "version": "0.1.0",
   "scripts": {
     "build": "npx webpack  --mode production --env ENV=production ",
