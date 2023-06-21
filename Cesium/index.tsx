@@ -9,7 +9,6 @@ import {
 } from "react-leaflet";
 
 const packageJson = require("./package.json") as any;
-import Map from "./components/Map";
 
 export const getAttributes = (): any => {
   return {
